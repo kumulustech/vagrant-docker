@@ -1,0 +1,10 @@
+version: '2'
+services:
+  hello-world:
+    build:
+      context: .
+    image: hello-world:latest
+    ports:
+     - "8000:8000"
+    volumes:
+     - /vagrant:/root
