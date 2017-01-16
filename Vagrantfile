@@ -124,6 +124,7 @@ Vagrant.configure(VAGRANTFILE_API_VERSION) do |config|
   config.vm.define "docker" do |c|
     customize_vm c, $vm_docker_mem
     config.vm.provision "shell", path: "docker-ubuntu.sh"
+    c.vm.hostname = 'docker'
     c.vm.network "private_network", ip: "#{$docker_ip}"
   end
 end
